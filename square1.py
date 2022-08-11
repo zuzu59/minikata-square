@@ -22,22 +22,27 @@ if __name__ == '__main__':
             print ("Not a number")
             exit()
 
-print(size)
+    print(size)
 
-square_size = size * size
-maxSquareSize = len(str(square_size))
+    square_size = size * size
+    maxSquareSize = len(str(square_size))
 
-print(square_size,maxSquareSize)
-
-currentNumber = 1
-while currentNumber <= square_size:
-    for j in range(0,size):
-        currentString = str(currentNumber).rjust(maxSquareSize, '0')
-        print(currentString, "", end='', flush=True)
-        currentNumber = currentNumber + 1
+    print(square_size,maxSquareSize)
     print("")
+    
+    def horizontal(size):
+        currentNumber = 1
+        while currentNumber <= square_size:
+            for j in range(0,size):
+                currentString = str(currentNumber).rjust(maxSquareSize, '0')
+                print(currentString, "", end='', flush=True)
+                currentNumber = currentNumber + 1
+            print("")
 
 
+    horizontal(size)
+    print("")
+    horizontal(size)
 
 
 
